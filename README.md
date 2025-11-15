@@ -1,16 +1,46 @@
 # ticket_mobile_test
 
-A new Flutter project.
+A simple ticket management app built with **Flutter**, **Provider**, and **SQLite**.
 
-## Getting Started
+## Features
+- View ticket list
+- Filter by status (ALL, OPEN, IN_PROGRESS, DONE)
+- Add ticket (title, description, category)
+- Ticket detail page
+- Update ticket status
+- Status default: OPEN
 
-This project is a starting point for a Flutter application.
+## Tech
+- Flutter
+- Provider (state management)
+- SQLite (local database)
 
-A few resources to get you started if this is your first Flutter project:
+## Run
+flutter pub get
+flutter run
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+shell
+Copy code
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Structure
+lib/
+├─ db/database_helper.dart
+├─ models/ticket.dart
+├─ provider/ticket_provider.dart
+├─ screens/
+│ ├─ ticket_list_screen.dart
+│ ├─ ticket_add_screen.dart
+│ └─ ticket_detail_screen.dart
+└─ main.dart
+
+markdown
+Copy code
+
+## Database
+Table: **tickets**
+- id  
+- title  
+- description  
+- category  
+- status  
+- createdAt  
